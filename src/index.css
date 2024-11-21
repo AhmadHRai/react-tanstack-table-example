@@ -1,0 +1,114 @@
+html {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fafafa;
+}
+
+table {
+  /* border: 1px solid lightgray; */
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: transparent;
+}
+
+tbody {
+  background-color: #f5f5f5;
+}
+
+th {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* tfoot {
+  color: gray;
+}
+
+tfoot th {
+  font-weight: normal;
+} */
+
+.resizer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+  transition: background-color 0.3s ease;
+}
+
+.resizer:hover,
+.resizer.isResizing {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (hover: hover) {
+  .resizer {
+    opacity: 0;
+  }
+
+  *:hover > .resizer {
+    opacity: 1;
+  }
+}
+
+/* --------- */
+
+.pagination-button {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pagination-button:hover,
+.pagination-button:focus {
+  background-color: #e0e0e0;
+}
+
+.pagination-page-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  /* font-weight: bold; */
+}
+
+.pagination-select {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pagination-button[disabled],
+.pagination-button:disabled {
+  background-color: #999;
+  color: #fff;
+  cursor: not-allowed;
+}
